@@ -1,0 +1,217 @@
+@import "../navbar";
+@import "../home-icon";
+body{
+  background-image: url('https://cdn.statically.io/img/www.pixelstalk.net/wp-content/uploads/2016/08/Outer-Space-Planets-Blue-1080p-Wallpaper.jpg');
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  min-width: 500px;
+}
+
+.sorting{
+  margin: 10px;
+  text-align: center;
+}
+.sort{
+  outline: none;
+  background-color:#4e9af1;
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.1em 0.1em 0;
+  border:0.16em solid rgba(255,255,255,0);
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align:center;
+  transition: all 0.2s;
+}
+.sort:hover{
+  border-color: rgba(255,255,255,1);
+}
+@media all and (max-width:30em){
+  .sort{
+    display:block;
+    margin:0.2em auto;
+    }
+}
+
+.product-list{
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-top: 20px;
+  background-color: lightskyblue;
+  border: 0.16em solid rgba(255,255,255,0);
+  text-align: center;
+  .item-description{
+    color: red;
+    margin: 10px;
+    font-size: 24px;
+  }
+  .item-date{
+    font-size: 18px;
+    color: #C82647;
+  }
+  .price{
+    font-size: 18px;
+    color: #48ff00;
+  }
+
+  button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  button:hover{
+    transition: background-color 1s ease-out;
+    background: #50cd1a;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  button:active{
+    transform: translateY(2px);
+  }
+  img{
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+#buyProducts{
+
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-image: url("https://holographica.space/wp-content/uploads/2020/09/An-Interstellar-Journey.jpg");
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  img{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:0; opacity:0}
+  to {top:200px; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:0; opacity:0}
+  to {top:200px; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  float: right;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background: linear-gradient(45deg, red, blue);
+  color: white;
+}
+#hypercube{
+  width: 150px;
+  height: 150px;
+  float: right;
+}
+#totalSum{
+  font-size: 20px;
+}
+.imageInCart{
+  width: 75px;
+  height: 75px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.productInCart{
+  width: max-content;
+  height: max-content;
+  display: inline-block;
+  margin: 15px;
+  border: 1px solid #00ffd5;
+  text-align: center;
+  .item-description{
+    font-size: 24px;
+    margin: 5px;
+    color: #C82647;
+  }
+  .item-cost{
+    font-size: 18px;
+    color: #f69d3c;
+  }
+  .product-quantity{
+    font-size: 18px;
+    color: skyblue;
+  }
+  #removeFromCart{
+    margin: 5px;
+  }
+}

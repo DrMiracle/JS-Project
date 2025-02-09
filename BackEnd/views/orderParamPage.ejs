@@ -1,0 +1,118 @@
+<%- include('common/header'); -%>
+<!-- LESS файл -->
+<!-- Написати: <link rel="stylesheet/less" type="text/css" href="less/***.less" /> -->
+<!-- Якщо треба navbar => @import "navbar"; -->
+<!-- Приклад -->
+<link rel="stylesheet/less" type="text/css" href="less/orderParamPage/orderParamBody.less" />
+<!-- Приклад -->
+<!-- LESS JavaScript компілятор -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+</head>
+<body>
+<%- include('common/navbar'); -%>
+
+<div class="container">
+    <img src="./images/mercury.gif" class="planet-gif" id="mercury-gif" data-toggle="tooltip" data-placement="top" title="Mercury">
+    <img src="./images/venus.gif" class="planet-gif" id="venus-gif" data-toggle="tooltip" data-placement="top" title="Venus">
+    <img src="./images/Earth.gif" class="planet-gif" id="earth-gif" data-toggle="tooltip" data-placement="top" title="Earth">
+    <img src="./images/Mars.gif" class="planet-gif" id="mars-gif" data-toggle="tooltip" data-placement="top" title="Mars">
+    <img src="./images/jupiter.gif" class="planet-gif" id="jupiter-gif" data-toggle="tooltip" data-placement="top" title="Jupiter">
+    <img src="./images/saturn.png" class="planet-gif" id="saturn-gif" data-toggle="tooltip" data-placement="top" title="Saturn">
+    <img src="./images/uranus.gif" class="planet-gif" id="uranus-gif" data-toggle="tooltip" data-placement="top" title="Uranus">
+    <img src="./images/Neptune.gif" class="planet-gif" id="neptune-gif" data-toggle="tooltip" data-placement="top" title="Neptune">
+
+    <div class="row">
+        <label id="label-head-param"> Please enter the information about the delivery </label>
+        <br><br>
+    </div>
+    Estimated Weight (kg):
+    <div id = 'wrap-drag'>
+        <div class = 'noselect' id = 'zero'>0</div>
+        <div id = slide></div>
+        <div class = 'noselect' id = 'hundred'>100</div>
+        <div id = 'to-drag'></div>
+        <br>
+        <div id = 'weight-display'>Weight: <span id = 'weight-val'>0</span>kg</div>
+    </div>
+    <div id="div-evaluated-cost">Estimated cost (UAH):</div>
+    <input class="form-control input-lg" id="input-cost" type="number" maxlength="6" placeholder="200">
+    <div class="success" id="cost-success">Let it be.</div>
+    <div class="failure" id="cost-failure">
+        The evaluated cost is a number above 0 and below 200000 :(
+    </div>
+    <br>
+    <textarea class="form-control" id="text-desc" rows="3" placeholder="Description"></textarea>
+    <br>
+    Who will pay?
+    <br>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="senderRadio" id="sender-radio" value="option1" checked>
+        <label class="form-check-label" for="sender-radio">
+            Sender
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="receiverRadio" id="receiver-radio" value="option2">
+        <label class="form-check-label" for="receiver-radio">
+            Receiver
+        </label>
+    </div>
+    <div id = 'final-btn-wrapper'>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#order-data-modal" id = 'final-order' disabled>Order</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="order-data-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <span>Name:
+                        <span id="span-name"></span>
+                        <input type="text" id="name-alter"><br>
+                    </span>
+                    <span>Surname:
+                        <span id="span-surname"></span>
+                        <input type="text" id="surname-alter"><br>
+                    </span>
+                    <span>Phone:
+                        <span id="span-phone"></span>
+                        <input type="text" id="phone-alter"><br>
+                    </span>
+                    <span>Destination:
+                        <span id="span-destination"></span>
+                        <select name="dest-alter" id="dest-alter">
+                            <option value="Mercury">Mercury</option>
+                            <option value="Venus">Venus</option>
+                            <option value="Earth">Earth</option>
+                            <option value="Mars">Mars</option>
+                            <option value="Jupiter">Jupiter</option>
+                            <option value="Saturn">Saturn</option>
+                            <option value="Uranus">Uranus</option>
+                            <option value="Neptune">Neptune</option>
+                        </select><br>
+                    </span>
+                    <span id="span-weight"></span><br>
+                    <span id="span-description"></span><br>
+                    <span id="span-date"></span><br>
+                    <span id="span-cost"></span><br>
+                    <span id="span-status"></span><br>
+                    <span id="span-payer"></span><br>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="btn-order">Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('common/footer'); -%>

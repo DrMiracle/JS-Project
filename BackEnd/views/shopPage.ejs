@@ -1,0 +1,38 @@
+<%- include('common/header'); -%>
+<!-- LESS файл -->
+<!-- Написати: <link rel="stylesheet/less" type="text/css" href="less/***.less" /> -->
+<!-- Якщо треба navbar => @import "navbar"; -->
+<!-- Приклад -->
+<link rel="stylesheet/less" type="text/css" href="less/shopPage/shop.less" />
+<!-- Приклад -->
+<!-- LESS JavaScript компілятор -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+</head>
+<body>
+<%- include('common/navbar'); -%>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+            <h3>Total sum:</h3>
+            <span id="totalSum"></span>
+            <span>$</span>
+            <button id="buyProducts" class="btn btn-warning">Buy products</button>
+        </div>
+    </div>
+
+</div>
+<div class="sorting">
+    <button class="sort" id="price" style="outline: none">Price</button>
+    <button class="sort" id="description" style="outline: none">Description</button>
+</div>
+<div class="container">
+<div class="row " id = "products"></div>
+</div>
+<%- include('common/footer'); -%>

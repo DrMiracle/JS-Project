@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Universal Delivery</title>
+
+    <link id="favicon" rel="shortcut icon" type="image/png" href="images/jupiter-favicon.png"/>
+
+    <!-- Bootsrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="less/resetPwdPage/resetPwdMain.less" />
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+    <!-- Email!!! -->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</head>
+<body>
+
+<!--<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="http://localhost:3989">
+        <img src="./images/brand.jpg" id = "brand" alt="">
+    </a>
+    <div id = "nav-top"><span>Super quick delivery - we travel faster than sound!</span></div>
+    <div id = "nav-bottom"><span>Trouble? Call +380-395-5566-12!</span> <span id="to-hide">We are available at any time of the day!</span></div>
+
+    <img src = "./images/profile.jpg" id = "profile">
+
+</nav>-->
+<%- include('common/navbar'); -%>
+<div class="loginForm">
+    <label for="email">The email you used to register on our website</label>
+    <input type="email" placeholder="email@example.com" id="email" required>
+    <label for="verification-code" id = 'ver-code-label'>A code was sent to your email. Type it in the box below</label>
+    <input type="number" placeholder="****" id="verification-code" required>
+    <span id = 'bad-code'>Wrong code</span>
+    <label for="new-password" id = 'new-password-label'>New Password</label>
+    <input type="password" placeholder="******" id="new-password" required>
+    <span id="invalid-password">
+        It should contain at least 4 characters with 1 digit
+    </span>
+    <button type="button" id="main-reset-btn">Submit</button>
+</div>
+<div id="notFound">
+    There is no user with such email on our website
+</div>
+
+<%- include('common/footer'); -%>

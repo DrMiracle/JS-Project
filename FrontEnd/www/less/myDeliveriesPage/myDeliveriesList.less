@@ -1,0 +1,99 @@
+@import "../home-icon";
+@marginSide: 30px;
+@paddingSide: 15px;
+@paddingVertical: 6px;
+@total-height: 73px;
+.del-list{
+  cursor: pointer;
+  box-sizing: border-box;
+  height: @total-height;
+  margin-left: @marginSide;
+  margin-right: @marginSide;
+  margin-bottom: 35px;
+  padding: @paddingVertical @paddingSide @paddingVertical @paddingSide;
+  background-color: crimson;
+  box-shadow: 4px 4px saddlebrown;
+  color: snow;
+  font-size: 20px;
+
+  @rightWidth: 110px;
+  .right-side{
+    float: right;
+    width: @rightWidth;
+    height: @total-height - 2*@paddingVertical;
+  }
+
+  .item-date{
+    float: right;
+    width: @rightWidth;
+    span{
+      float: right;
+    };
+  }
+
+  .item-cost{
+    float: right;
+    margin-top: 8px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .item-dest{
+    //margin-left: 100px;
+  }
+
+  .item-status{
+    display: inline-block;
+    width: 30%;
+  }
+
+  @media(max-width: 750px){
+    .item-status{
+      width: 35%;
+    }
+  }
+
+  /*@media(max-width: 670px){
+    .item-dest{
+      margin-left: 10px;
+    }
+  }*/
+}
+
+#add-deliveries{
+  margin-top: 50px;
+}
+
+.fade:not(.show) {
+  opacity: 0.5 !important;
+}
+
+#delivery-info{
+  opacity: 1 !important;
+}
+
+.modal-content{
+  margin-top: 150px;
+}
+
+#position-cost{
+  font-size: 18px;
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  width: 150px;
+  text-align: right;
+}
+
+#change-description{
+  width: 100px;
+  display: none;
+}
+
+#modal-payer {
+  //cursor: pointer;
+}
+
+#modal-description{
+  cursor: pointer;
+}

@@ -1,0 +1,89 @@
+@import "../home-icon";
+@heightForCentering: 45px;
+.wrapper{
+  position: fixed;
+  bottom: 0;
+  height: @heightForCentering;
+  width: 100%;
+}
+
+@border-radius: 75px;
+@sortWidth: 380px;
+.slideup-for-sort{
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: @heightForCentering;
+  width: @sortWidth;
+  background-color: crimson;
+  border-top-left-radius: @border-radius;
+  border-top-right-radius: @border-radius;
+  text-align: center;
+  font-size: 20px;
+  color: teal;
+  line-height: @heightForCentering;
+  cursor: pointer;
+  transition: bottom 1s;
+  z-index: 2;
+  span{
+    color: aqua;
+  }
+}
+
+.sort-item{
+  visibility: hidden;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: azure;
+  width: @sortWidth;
+  height: @heightForCentering;
+  line-height: @heightForCentering;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  border-bottom: 1px solid sienna;
+  transition: bottom 1s;
+  cursor: pointer;
+}
+
+#date, #dest, #status{
+  transition: bottom 1s;
+  bottom: 0;
+}
+
+.arrow-up, .arrow-down{
+  height: 20px;
+  width: 13px;
+  float: right;
+  margin-top: 10px;
+}
+
+.arrow-down{
+  margin-right: 10px;
+}
+
+#date-arrow-down, #date-arrow-up, #dest-arrow-down, #dest-arrow-up, #cost-arrow-down, #cost-arrow-up{
+  visibility: hidden;
+}
+
+#status-arrow-down{
+  opacity: 0.5;
+}
+
+@marginRight: 28px;
+#main-arrow-down{
+  margin-right: @marginRight;
+  display: none;
+}
+
+#main-arrow-up{
+  margin-right: @marginRight;
+}

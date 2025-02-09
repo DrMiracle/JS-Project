@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Universal Delivery</title>
+
+    <link id="favicon" rel="shortcut icon" type="image/png" href="images/Jupiter.png"/>
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="./images/brand.jpg" id = "brand" alt="">
+    </a>
+    <div id = "nav-top"><span>Super quick delivery - we travel faster than sound!</span></div>
+    <div id = "nav-bottom"><span>Trouble? Call +380-395-5566-12!</span> <span id="to-hide">We are available at any time of the day!</span></div>
+    <img src = "./images/profile.jpg" id = "profile">
+</nav>
+
+<div class="container">
+    <div class = "row" id = "top">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" id = "top-left">
+            <a href="http://localhost:3989/archive.html">
+                <img src = './images/home-removebg-preview.png' class="main-image" id = 'my-dels'>
+            </a>
+            <div class = "option">My Deliveries</div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" id = "top-right">
+            <a href="http://localhost:3989/order.html">
+                <img src = './images/postman-removebg-preview.png' class="main-image" id = 'new-del'>
+            </a>
+            <div class = "option">Order a Delivery</div>
+        </div>
+    </div>
+    <div class="row" id = "bottom">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" id = "bottom-left">
+            <a href="http://localhost:3989/shop.html">
+                <img src = './images/mi-removebg-preview.png' class="main-image" id = 'mini-shop'>
+            </a>
+            <div class = "option">Buy something?</div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6" id = "bottom-right">
+            <a href="http://localhost:3989/payment.html">
+                <img src = './images/credit_card-removebg-preview.png' class="main-image" id = 'pay'>
+            </a>
+            <div class = "option">Pay for Delivery</div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript"  src="js/main.js"> </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "final-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "node server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basil": "^0.0.5",
+    "basil.js": "^0.4.11",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "brfs": "^2.0.2",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "grunt": "^1.3.0",
+    "grunt-browserify": "^6.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "path": "^0.12.7"
+  }
+}

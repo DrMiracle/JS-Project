@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Universal Delivery</title>
+
+    <link id="favicon" rel="shortcut icon" type="image/png" href="images/jupiter-favicon.png"/>
+
+    <!-- Bootsrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="less/signUpPage/signUpMain.less" />
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+    <!-- Email!!! -->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</head>
+<body>
+
+<!-- Profile code -->
+<div id = 'profile-center'>
+    <div id = 'format-request'>
+        New to our website?<br>
+        <button type="button" class="btn btn-info" id = "sign-up-btn">Sign up!</button><br>
+        <br>
+        Already have an account?<br>
+        <a href="http://localhost:3989/login.html" class="btn btn-info" id="loginButton">Log in!</a>
+    </div>
+
+    <form>
+        <!-- Learn Name -->
+        <div class="form-group" id = "learn-name">
+            <label for="input-name">Please enter your name</label>
+            <input type="text" class="form-control" id="input-name" placeholder="Your name">
+            <div class="invalid-feedback" id = 'invalid-name'>
+                A name can contain only latin letters, dashes and apostrophes.
+            </div>
+        </div>
+        <div class="form-group" id = "learn-surname">
+            <label for="input-surname">Please enter your surname</label>
+            <input type="text" class="form-control" id="input-surname" placeholder="Your surname">
+            <div class="invalid-feedback" id = 'invalid-surname'>
+                A surname can contain only latin letters, dashes and apostrophes.
+            </div>
+        </div>
+        <div class="form-group" id = "learn-email">
+            <label for="input-email">Please enter your email address</label>
+            <input type="text" class="form-control" id="input-email" placeholder="Your email address">
+            <div class="invalid-feedback" id = 'invalid-email'>
+                name@example.com
+            </div>
+        </div>
+        <div id = 'validate-email'>
+            <label for="input-code">An email with a verification code was sent to your address.
+                Please enter the code in the form below</label>
+            <input type="text" class="form-control" id="input-code" placeholder="xxxx">
+            <div class="invalid-feedback" id = 'invalid-code'>
+                Incorrect code.
+            </div>
+        </div>
+        <div class="form-group" id = "learn-password">
+            <label for="input-password">Please enter your password</label>
+            <input type="password" class="form-control" id="input-password" placeholder="Your password">
+            <div class="invalid-feedback" id = 'invalid-password'>
+                It should contains 4 character with 1 digit
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" id = "resend">Resend code</button>
+        <button type="button" class="btn btn-primary" id = "move-signup">Next</button>
+    </form>
+</div>
+<a href = "http://localhost:3989"><img src="images/close.png" id = "close-button"></a>
+<!-- Profile code -->
+
+<%- include('common/footer'); -%>

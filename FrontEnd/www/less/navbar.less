@@ -1,0 +1,179 @@
+@height: 70px;
+
+.navbar{
+  justify-content: normal;
+}
+
+#brand {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+#brand:hover{
+  transition: 1s ease-out;
+  transform: rotate(360deg);
+}
+
+#profile{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+#basket{
+  display: inline-block;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  cursor: pointer;
+  margin: auto;
+}
+#cart-len{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-size: 18px;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #1db021;
+  border-radius: 50%;
+}
+#nav-top{
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 130px;
+  height: 38px;
+  width: 516px;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: darkorange;
+  color: coral;
+  span{
+    vertical-align: middle;
+  }
+}
+
+#nav-bottom{
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 130px;
+  height: 38px;
+  color: coral;
+  span{
+    vertical-align: middle;
+    span{
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  #nav-top{
+    width: 413px;
+    span{
+      font-size: 0.8rem;
+    }
+  }
+  #nav-bottom{
+    span{
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  #nav-top{
+    width: 283px;
+  }
+  #to-hide{
+    display: none;
+  }
+}
+.modalBox {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-wrap {
+  position: relative;
+  top: 200px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-wrap b{
+  padding: 20px 35px 0;
+}
+
+.modal-wrap p{
+  padding: 20px 25px 0;
+}
+
+.modal-wrap small{
+  padding: 20px 25px 0;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:0px; opacity:0}
+  to {top:200px; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:0px; opacity:0}
+  to {top:200px; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.closeModal{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  top: 15%;
+}

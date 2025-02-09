@@ -1,0 +1,45 @@
+@import "../home-icon";
+body{
+  position: relative;
+  width: 100%;
+  min-width: 500px;
+  background-color: cornflowerblue;
+}
+
+#profile-center{
+  position: absolute;
+  left: 33vw;
+  right: 33vw;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  height: 100vh;
+}
+
+@media (max-width: 500px) {
+  #profile-center{
+    left: 150px;
+    right: 150px;
+  }
+}
+
+@dim: 30px;
+#close-button{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: @dim;
+  width: @dim;
+  border-radius: 50%;
+}
+
+@font-size: 25px;
+#format-request{
+  margin-top: 170px;
+  text-align: center;
+  font-size: @font-size;
+  button{
+    font-size: @font-size;
+    vertical-align: middle;
+  }
+}

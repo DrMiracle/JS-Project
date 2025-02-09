@@ -1,0 +1,14 @@
+CREATE TABLE `js_project`.`products` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `description` VARCHAR(255) NOT NULL,
+  `cost` DECIMAL(5,2) NOT NULL,
+  `date` VARCHAR(45) NOT NULL,
+  `icon` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO products (description, cost, date, icon) VALUES ('Klein Bottle','100','Date 0','../images/klein.jpg');
+INSERT INTO products (description, cost, date, icon) VALUES ('Tesseract','10','Date 0','../images/cube.png');
+INSERT INTO products (description, cost, date, icon) VALUES ('Mebius Strip','50.90','Date 0','../images/mebius.jpg');
+INSERT INTO products (description, cost, date, icon) VALUES ('Gravity gun','500','Date 1','../images/ggun.jpg');
+INSERT INTO products (description, cost, date, icon) VALUES ('Menger sponge','70','Date 0','../images/menger_sponge.gif');
+INSERT INTO products (description, cost, date, icon) VALUES ('Death Star','999','Date 4','../images/deathStar.jpg');
